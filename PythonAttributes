@@ -1,0 +1,76 @@
+def add_attribute(window_attributes):
+    print()
+    attribute_name = input("Enter the attribute name: ")
+    print()
+    attribute_value = input("Enter the attribute value: ")
+
+    window_attributes[attribute_name] = attribute_value
+
+    print(f"{attribute_name}: {attribute_value} have been added to the dictionary.")
+
+def display_attributes(window_attributes):
+    print("\nDisplaying the window attributes.\n")
+    for attribute, value in window_attributes.items():
+        print(f"{attribute} : {value}")
+
+def calculate_aspect_ratio(window_attributes):
+    if 'width' not in window_attributes:
+        print()
+        print("Please add the 'width' attribute first.")
+        return
+
+    if 'height' not in window_attributes:
+        print()
+        print("Please add the 'height' attribute first.")
+        return
+
+    try:
+        width = int(window_attributes['width'])
+    except ValueError:
+        print("The 'width' attribute should be a numeric value.")
+        return
+
+    try:
+        height = int(window_attributes['height'])
+        if height == 0:
+            raise ZeroDivisionError
+    except ValueError:
+        print("The 'height' attribute should be a numeric value.")
+        return
+    except ZeroDivisionError:
+        print("The 'height' attribute should be a positive non-zero number.")
+        return
+
+    aspect_ratio = width / height
+    print(f"Aspect ratio: {aspect_ratio:.2f}")
+
+def main():
+    window_attributes = {}  
+
+    while True:
+        
+        print("\nWindow Administration Application\n")
+        print("a: Exit application")
+        print("b: Enter an attribute")
+        print("c: Calculate and display the aspect ratio")
+        print("d: Display the window attributes and values")
+
+        print() 
+        
+        choice = input("Please choode a, b, c or d: ").lower()  
+
+
+        if choice == 'a':
+            print("Done!")
+            break  
+        elif choice == 'b':
+            add_attribute(window_attributes) 
+        elif choice == 'c':
+            calculate_aspect_ratio(window_attributes) 
+        elif choice == 'd':
+            display_attributes(window_attributes) 
+        else:
+            print("Invalid choice! Please enter only a, b, c, or d.") 
+
+if __name__ == "__main__":
+    main()
