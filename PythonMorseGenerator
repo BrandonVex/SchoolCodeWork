@@ -1,0 +1,53 @@
+import morse
+
+def translate_to_morse(text):
+    morse_code_list = []
+    for letter in text:
+        letter = letter.upper()
+        if letter in morse.alpha_to_morse:
+            morse_code_list.append(morse.alpha_to_morse[letter])
+        else:
+            morse_code_list.append("")
+    morse_code = " ".join(morse_code_list)
+    return morse_code
+
+def translate_to_alpha(morse_code):
+    letters = morse_code.split()
+    text = ""
+    for code in letters:
+        if code in morse.morse_to_alpha:
+            text += morse.morse_to_alpha[code]
+        else:
+            text += ""
+    return text
+
+while True:
+    print("\nMorse Code Translator")
+    print()
+    print("0: Exit")
+    print("1: Translate a word into Morse Code")
+    print("2: Translate Morse Code to text.")
+    
+    print()
+
+    choice = input("Enter your choice: ")
+
+    if choice == "0":
+        print("Exiting the program.")
+        break
+    elif choice == "1":
+        word = input("Enter a word: ")
+        morse_code = translate_to_morse(word)
+        if morse_code:
+            print(f"The Morse Code for '{word}' is: {morse_code}")
+        else:
+            print("Invalid input.")
+    elif choice == "2":
+        morse_code = input("Enter Morse Code: ")
+        text = translate_to_alpha(morse_code)
+        if text:
+            print(f"The text for Morse Code '{morse_code}' is: {text}")
+        else:
+            print("Invalid input.")
+    else:
+        print("Invalid choice. Please enter 0, 1, or 2.")
