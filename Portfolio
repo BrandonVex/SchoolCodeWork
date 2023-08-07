@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Name: Brandon
+File Name: {Redacted}
+Date: 08/06/2023
+-->
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Portfolio</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+    </style>
+</head>
+
+<body>
+
+<header> 
+  <h1>Brandon Portfolio</h1>
+  <img src="{Image}" alt="Brandon" class="responsive-image">
+</header>
+
+<nav>
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="Template.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="">Extra</a></li>
+  </ul>
+</nav>
+
+<!--
+Purpose: My portfolio main area
+-->
+
+<main>
+  <p class="intro-text">.
+    Hello! My name is Brandon, I am a current college attendee at wilmington university entering their junior year.  I am a certified AWS Solutions Architect and currently pursuing my Bachelor's in cybersecurity
+  </p>
+</main>
+
+<footer>
+  <p>Contact: {Contact informationn} </p>
+  <p>&copy; Copyright 2023. All Rights Reserved.</p>
+</footer>
+
+</body>
+
+</html>
