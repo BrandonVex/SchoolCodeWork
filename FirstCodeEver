@@ -1,0 +1,7 @@
+print("Pet")
+print("Naming")
+print("Questionaire")
+
+input("\nIf you had a pet alligator, what would you name it?")
+
+input("\nWhy did you pick that name?")
