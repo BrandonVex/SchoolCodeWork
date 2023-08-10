@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--
+Student Name: Brandon 
+File Name: (redacted)
+Date: 08/12/2023
+-->
+
+<html lang="en">
+
+<head>
+	<title>Brandon</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="container">
+
+		<!--Use the header area for the website name or logo-->	
+		<header class="header">
+			<h1>Brandon</h1>
+			<a href="index.html"><img class="Img" src="Picture/placeholder.png" alt="Brandon"></a>
+			<h3>Wilmington University Student</h3>
+			<h4>Do we truly know, who "I" even am?</h4>
+		</header>
+
+		<!--Use the nav area to add hyperlinks to other pages within the website-->	
+		<nav class="nav">
+			<ul class="nav-li">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="About.html">About</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!--The main area is for the main content of the webpage-->	
+		<main class="main">
+			<div class="mobile">
+				<p><span class="action">Welcome to my portfolio&#128522;</span></p>
+				<p>Hello and welcome to my portfolio!</p>
+				<p>I currently am a student at Wilmington university pursuing a degree in cybersecurity</p>
+			</div>
+
+			<div class="tablet-desktop">
+				<p><span class="action">Welcome to my portfolio&#128522;</span></p>
+				<p>Hello and welcome to my portfolio!</p>
+				<p>I currently am a student at Wilmington university pursuing a degree in cybersecurity</p>
+			</div>
+		</main>
+
+		<!--Use the footer area to add webpage footer content-->	
+		<footer class="footer">
+
+			<p class="footer-text"><a class="footer-link" href="Email@placeholder.com">Email@placeholder.com</a></p>
+			<p class="footer-text">&copy; 2023. All Rights Reserved.</p>
+
+		</footer>
+	</div>
+</body>
+
+</html>
