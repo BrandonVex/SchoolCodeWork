@@ -1,0 +1,158 @@
+/* Brandon, 08/12/2023, styles.css */
+
+/*The style reset rule reduces browser inconsistencies*/
+body, header, nav, main, footer, h1, div, img, ul{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	  background-color: #ccc;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* style rules for mobile viewport*/
+
+/* Style rules for header begin */
+header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: #000;
+	height: 190px;
+}
+
+header img {
+	margin: 0 auto;
+}
+
+/* Style rules for nav begin */
+nav {
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+nav li {
+	font-size: 1.75em;
+	font-family: 'Edu SA Beginner';
+	border-top: 1px solid #fff;
+
+}
+
+nav li:first-child {
+	border-top: none;
+}
+
+nav li a {
+	display: block;
+	color: #fff;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+/* show mobile class, hide tablet-desktop class */
+.mobile {
+	display: block;
+}
+
+.tablet-desktop {
+	display: none;
+}
+
+/* Style rules for main begin */
+.main {
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.15em;
+}
+
+.action {
+	font-size: 1.35em;
+	color: #666600;
+	font-weight: bold;
+}
+
+.round {
+	border-radius: 8px;
+}
+
+#about {
+	margin: 0 2%;
+}
+
+#about {
+	clear: left;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #f2f2f2;
+	padding: 1% 2%;
+	list-style-type: none;
+}
+
+#about dt {
+	font-weight:bold;
+}
+
+#about dd {
+	padding:0.5% 1% 2% 0;
+}
+
+/* style rules for footer begin */
+.footer p {
+	font-size: 0.75em;
+	text-align: center;
+	color: #fff;
+	padding: 0 1em;
+}
+
+.footer p a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#contact {
+	text-align: center;
+}
+
+#contact .contact-email-link {
+	color: #666600;
+	text-decoration: none;
+}
+
+.map {
+	border: 2px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
+/* #about {
+	margin: 0 2%;
+}
+
+#about {
+	clear: left;
+	border-top: 1px solid #000;
+	border bottom: 1px solid #000;
+	background-color: #f2f2f2;
+	padding: 1% 2%;
+	list-style-type: none;
+}
+
+#about dt {
+	font weight:bold;
+}
+
+#about dd {
+	padding:0.5% 1% 2% 0;
+}
+*/
