@@ -1,3 +1,9 @@
+pip install scapy
+---------------------------
+sudo python your_script_name.py
+
+--------------------------
+
 import scapy.all as scapy
 
 def packet_callback(packet):
