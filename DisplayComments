@@ -1,0 +1,55 @@
+import time
+import json
+
+def display_comments(records):
+    for record in records:
+        print("Date:", record["date"])
+        print("Name:", record["name"])
+        print("Comment:", record["comment"])
+        print("------------------------")
+
+def main():
+    file_name = "step4_data.json"
+
+    try:
+        with open(file_name, "r") as file:
+            ds = json.load(file)
+            records = ds["records"]
+    except FileNotFoundError:
+        records = []
+
+    while True:
+        print("Forum Comments")
+        print("==============")
+        print("0: Exit")
+        print("1: Display Comments")
+        print("2: Add Comment")
+        print("==============")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '0':
+            print("Thank you for participating!")
+            break
+        elif choice == '1':
+            display_comments(records)
+        elif choice == '2':
+            ts = time.ctime()
+            print()
+            name = input("Enter your name: ")
+            print()
+            comment = input("Enter your comment: ")
+            print()
+
+            record = {"date": ts, "name": name, "comment": comment}
+            records.append(record)
+            print("Comment added successfully!")
+
+    # After exiting the loop, write the records back to the JSON file
+    ds = {"records": records}
+
+    with open(file_name, "w") as file:
+        json.dump(ds, file)
+
+if __name__ == "__main__":
+    main()
