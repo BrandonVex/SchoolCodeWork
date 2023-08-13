@@ -1,0 +1,45 @@
+import random
+
+def roll_dice():
+    return random.randint(1, 6)
+
+def announce_prize(roll_result):
+    if roll_result == 1:
+        prize = "a small rock"
+    elif roll_result == 2:
+        prize = "a broken pen"
+    elif roll_result == 3:
+        prize = "a used tissue"
+    elif roll_result == 4:
+        prize = "a rusty nail"
+    elif roll_result == 5:
+        prize = "a coupon for a free drink"
+    else:
+        prize = "a weekend getaway!"
+
+    return prize
+
+def main():
+    print("Welcome to the Dice Roll Game!")
+    print()
+    print("Each roll costs $10.")
+    print()
+    input("Press Enter to roll the dice...")
+
+    # Check if the player has enough money to play
+    money = 10
+    if money < 10:
+        print("Sorry, you don't have enough money to play.")
+        return
+
+    # Deduct the cost of the game
+    money -= 10
+
+    roll_result = roll_dice()
+    print(f"You rolled a {roll_result}!")
+    
+    prize = announce_prize(roll_result)
+    print(f"Congratulations! You won {prize}")
+
+if __name__ == "__main__":
+    main()
