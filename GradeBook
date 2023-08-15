@@ -1,0 +1,85 @@
+class GradeBook:
+    count = 0  # Class attribute to count instances
+
+    def __init__(self, name):
+        self.name = name
+        self.grades = []
+        GradeBook.count += 1
+
+    def quizScore(self, score):
+        self.grades.append(score)
+
+    def discussionScore(self, score):
+        self.grades.append(score)
+
+    def programmingScore(self, score):
+        self.grades.append(score)
+
+    def currentAverage(self):
+        if len(self.grades) == 0:
+            return 0
+        return sum(self.grades) / len(self.grades)
+
+
+def main():
+    student_names = ["Brandon", "Isaac", "Jennifer", "Darley", "Melloeta"]
+    students = {name: GradeBook(name) for name in student_names}
+    current_student = None
+
+    while True:
+        print("\nMenu:")
+        print()
+        print("1. Select a student")
+        print()
+        print("2. Enter quiz grade")
+        print()
+        print("3. Enter discussion grade")
+        print()
+        print("4. Enter programming assignment grade")
+        print()
+        print("5. Display current average grades for all students")
+        print()
+        print("6. Quit")
+        
+        print()
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            print("Select a student:")
+            for idx, name in enumerate(student_names, start=1):
+                print(f"{idx}. {name}")
+            student_choice = int(input())
+            current_student = students[student_names[student_choice - 1]]
+        elif choice == '2':
+            if current_student:
+                score = float(input("Enter quiz grade: "))
+                current_student.quizScore(score)
+            else:
+                print("No student selected.")
+        elif choice == '3':
+            if current_student:
+                score = float(input("Enter discussion grade: "))
+                current_student.discussionScore(score)
+            else:
+                print("No student selected.")
+        elif choice == '4':
+            if current_student:
+                score = float(input("Enter programming assignment grade: "))
+                current_student.programmingScore(score)
+            else:
+                print("No student selected.")
+        elif choice == '5':
+            print("Current average grades for all students:")
+            for name, student in students.items():
+                avg_grade = student.currentAverage()
+                print(f"{name}: {avg_grade}")
+        elif choice == '6':
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+
